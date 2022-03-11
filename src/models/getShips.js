@@ -23,6 +23,7 @@ const getShips = async (req, res, next)=>{
     catch (error) {
         res.send(error)
     }
+    // corpo da requisicao
     console.log(req.params)
 }
 
