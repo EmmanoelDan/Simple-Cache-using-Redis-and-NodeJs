@@ -1,6 +1,6 @@
 const express = require ('express');
 const responseTime = require('response-time');
-const routes = require('./index')
+const routes = require('./routes')
 
 const PORT = process.env.PORT || 3333;
 

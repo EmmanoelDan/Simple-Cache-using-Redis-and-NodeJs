@@ -4,9 +4,10 @@ const {promisify} = require('util');
 
 const PORT_REDIS = process.env.PORT_REDIS || 6379
 
-const client = redis.createClient(PORT_REDIS);
+const cache = redis.createClient(PORT_REDIS);
 
-const getAsync = promisify(client.get).bind(client)
-const setAsync = promisify(client.set).bind(client)
+const getAsync = promisify(cache.get).bind(cache)
+const setAsync = promisify(cache.set).bind(cache)
 
-module.exports = { getAsync, setAsync }
+
+module.exports = { cache, getAsync, setAsync }
